@@ -1,0 +1,45 @@
+CREATE TABLE modalidade
+(
+	idModalidade				INT PRIMARY KEY AUTO_INCREMENT,
+    	nome					VARCHAR(100),
+    	descricao				varchar(100),
+    	imagem 					varchar(2000)
+);
+ 
+CREATE TABLE usuario
+(
+	idUsuario			INT PRIMARY KEY AUTO_INCREMENT,
+    	nome				VARCHAR(100),
+    	email 				varchar(100),
+    	dtNascimento 			date,
+    	cidade 				varchar(100),
+    	senha 				varchar(100)
+);
+ 
+CREATE TABLE plano
+(
+	idPlano 		INT PRIMARY KEY AUTO_INCREMENT,
+    	nome 			varchar(100),
+    	descricao 		varchar(100),
+    	valor 			numeric
+);
+ 
+CREATE TABLE itemPlano
+(
+	iditemPlano 		int PRIMARY KEY AUTO_INCREMENT,
+    	idModalidade 		Int,
+    	idPlano 		INT,
+	CONSTRAINT fkplano  FOREIGN KEY (idPlano) REFERENCES plano (idPlano),
+	CONSTRAINT fkmodalidade  FOREIGN KEY (idModalidade) REFERENCES modalidade (idModalidade)
+);
+ 
+CREATE TABLE matricula
+(
+	idMatricula 		INT PRIMARY KEY AUTO_INCREMENT,
+    	dtInicio 		date,
+    	dtValidade 		date,
+    	idPlano 		int,
+    	idUsuario		int,
+	CONSTRAINT fkplano  FOREIGN KEY (idPlano) REFERENCES plano (idPlano),
+	CONSTRAINT fkusuario  FOREIGN KEY (idUsuario) REFERENCES usuario (idUsuario)
+);
