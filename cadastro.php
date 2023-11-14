@@ -67,7 +67,7 @@
  
         public function setsenha($_senha)
         {
-            $this->setsenha = $_senha;
+            $this->senha = $_senha;
         }
  
         public function cadastro()
