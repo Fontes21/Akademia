@@ -18,6 +18,57 @@
             $this->cidade = $_cidade;
             $this->senha = $_senha;
         }
+        
+        public function getnome()
+        {
+            return $this->nome;
+        }
+ 
+        public function setnome($_nome)
+        {
+            $this->nome = $_nome;
+        }
+ 
+        
+        public function getemail()
+        {
+            return $this->email;
+        }
+ 
+        public function setemail($_email)
+        {
+            $this->limite = $_email;
+        }
+
+        public function getdtnascimento()
+        {
+            return $this->dtnascimento;
+        }
+ 
+        public function setdtnascimento($_dtnascimento)
+        {
+            $this->dtnascimento = $_dtnascimento;
+        }
+ 
+        public function getcidade()
+        {
+            return $this->cidade;
+        }
+ 
+        public function setcidade($_cidade)
+        {
+            $this->cidade = $_cidade;
+        }
+
+        public function getsenha()
+        {
+            return $this->senha;
+        }
+ 
+        public function setsenha($_senha)
+        {
+            $this->setsenha = $_senha;
+        }
  
         public function cadastro()
         {
