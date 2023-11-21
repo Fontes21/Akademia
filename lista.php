@@ -1,5 +1,5 @@
 <?php
-    include_once("class/Cadastro.php");
+    include_once("lista.php");
 ?>
 
 <!DOCTYPE html>
