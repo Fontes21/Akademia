@@ -88,6 +88,19 @@
             $statement->execute($cadastro);
  
             return true;
+        
+        
+        }
+       
+        public function listarProduto()
+        {
+            include("assets/db/conn.php");
+
+            $sql = "CALL psListarProduto('')";
+            $data = $conn->query($sql)->fetchAll();
+
+            return $data;
         }
     }
+
 ?>
