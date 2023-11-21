@@ -1,5 +1,5 @@
 <?php
-    include_once("Cadastro.php");
+    include_once("class/Cadastro.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,6 @@
         <input type="text" name="email" minlength="3" required><br><br>
 
         <label>cidade:</label>
-   
         <input type="text" name="cidade" minlength="3" required><br><br>
 
         <input type="submit" name="inserir" value="Inserir">

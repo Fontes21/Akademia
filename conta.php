@@ -39,7 +39,7 @@
                 
                 echo $p->cadastrar() == true ?
                         "<p>cadastro feito</p>" :
-                        "<p>Ocorreu um erro.</p>";
+                        "<p>Ocorreu um erro.</p>";                                                                                                                                                                                                                                                                           
             }
         ?>
  
