@@ -3,8 +3,8 @@
     $p = new Produto();
 
     $p->excluir($_GET["pid"]);
-    echo "Produto excluído";
+    echo "usuário excluído";
 ?>
 
-<a href="formProduto.php">Voltar</a>
+<a href="formlista.php">Voltar</a>
 
