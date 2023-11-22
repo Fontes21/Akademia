@@ -6,5 +6,5 @@
     echo "usuário excluído";
 ?>
 
-<a href="formlista.php">Voltar</a>
+<a href="excluir.php">Voltar</a>
 
