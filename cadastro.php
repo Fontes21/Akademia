@@ -101,6 +101,24 @@
 
             return $data;
         }
+        public function deleteUsuario($_id)
+        {
+ 
+            include("db/conn.php");
+            $sql = "CALL piUsuario(:nome, :email, :dtnascimento, :cidade, :senha)";
+ 
+            $data = [
+ 
+               "id" => $_id
+            ];
+ 
+            $statement = $conn->prepare($sql);
+            $statement->execute($cadastro);
+ 
+            return true;
+ 
+         
+        }
     }
 
 ?>
