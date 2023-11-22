@@ -119,6 +119,40 @@
  
          
         }
+        public function editar($_id)
+        {
+ 
+            include("db/conn.php");
+            $sql = "CALL psUsuario(:id)";
+ 
+            $data = [
+ 
+               "id" => $_id
+            ];
+ 
+            $statement = $conn->prepare($sql);
+            $statement->execute($editar);
+ 
+            return true;
+ 
+         
+        }
+
+        public function atualizarcadastro($_id)
+        {
+            include("assets/db/conn.php");
+            $sql = "CALL puProduto(:id, :nome)";
+
+            $data = [
+                'id' => $_id,
+                'nome' => $this->nome,
+            ];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute($data);
+
+            return true;
+        }
     }
 
 ?>

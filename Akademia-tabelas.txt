@@ -102,3 +102,28 @@ CREATE PROCEDURE pdProduto
 BEGIN
 	DELETE FROM produto WHERE idProduto = _id;
 END
+
+DELIMITER //
+CREATE PROCEDURE psusario3
+(
+	IN _id		INT
+)
+BEGIN
+SELECT 
+	P.idusuario,
+    C.nome AS nomeusuario
+FROM produto P 
+JOIN categoria C ON C.nomeusuario = P.idusuario
+WHERE P.idusuario = _id;
+END //
+
+DELIMITER //
+CREATE PROCEDURE puusuario2
+(
+	IN	_id			INT,
+    IN	_nome		VARCHAR(100)
+)
+BEGIN
+	UPDATE usuario
+    	SET nome = _nome,
+    WHERE idusuario = _id;
