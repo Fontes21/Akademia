@@ -123,7 +123,7 @@ END //
 
 
 DELIMITER //
-CREATE PROCEDURE puusuario2
+CREATE PROCEDURE puupdate
 (
 	IN	_id			INT,
     IN	_nome		VARCHAR(100)
@@ -132,6 +132,7 @@ BEGIN
 	UPDATE usuario
     	SET nome = _nome,
     WHERE idusuario = _id;
+END//
 
 
 
