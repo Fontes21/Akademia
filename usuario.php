@@ -69,6 +69,8 @@
         {
             $this->senha = $_senha;
         }
+
+        public function autenticar
  
         public function cadastro()
         {

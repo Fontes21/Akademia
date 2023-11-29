@@ -59,7 +59,7 @@ BEGIN
 	INSERT INTO categoria (nome) VALUES (_nome);
 END //
 
-
+---------------------------------
 
 CALL piCategoria;
 
@@ -79,6 +79,7 @@ BEGIN
 
 END //
 
+----------------------------------
 
 DELIMITER //
 CREATE PROCEDURE psListarProduto
@@ -96,6 +97,7 @@ JOIN categoria C ON C.idCategoria = P.idCategoria
 WHERE P.nome LIKE CONCAT(_nome,'%');
 END //
 
+-----------------------------------
 
 DELIMITER //
 CREATE PROCEDURE pdProduto
@@ -106,6 +108,7 @@ BEGIN
 	DELETE FROM produto WHERE idProduto = _id;
 END
 
+----------------------------------
 
 DELIMITER //
 CREATE PROCEDURE psusario3
@@ -121,6 +124,7 @@ JOIN categoria C ON C.nomeusuario = P.idusuario
 WHERE P.idusuario = _id;
 END //
 
+----------------------------------
 
 DELIMITER //
 CREATE PROCEDURE puupdate
@@ -134,7 +138,7 @@ BEGIN
     WHERE idusuario = _id;
 END//
 
-
+-------------------------------------
 
 DELIMITER //
 CREATE PROCEDURE Usuario(
@@ -148,4 +152,28 @@ CREATE PROCEDURE Usuario(
 BEGIN
  
 	INSERT INTO categoria (nome, email, dtNascimento, cidade, senha) VALUES (_nome,_email,_dtNascimento,_cidade,_senha);
+END //
+
+-----------------------------------
+
+DELIMITER //
+CREATE PROCEDURE psloginusuario
+(
+	IN _usuario 	varchar(100);
+    IN _senha 		varchar(100)
+)
+BEGIN 
+	SELECT*FROM usuario WHERE usuario = _usuario AND senha = _senha;
+END //
+
+-------------------------------------
+
+DELIMITER //
+CREATE PROCEDURE piUsuario
+(
+	IN	_usuario	VARCHAR(100),
+    IN	_senha		VARCHAR(100)
+)
+BEGIN
+	INSERT INTO usuario (usuario, senha) VALUES (_usuario, _senha);
 END //
