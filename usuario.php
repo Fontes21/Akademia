@@ -156,20 +156,3 @@
     }
 
 ?>
-
-<?php
-    
-    class usuario{
-
-        private $usuario;
-        private $senha;
-    
-        public function __construct
-
-        $this-> $_usuario;
-        $this-> $_senha;
-
-
-    }
-    
-?>
