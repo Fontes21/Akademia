@@ -65,7 +65,7 @@
                             <td> " . $item["cidade"] . "</td>
                             <td> <a href='excluirProduto.php?pid=" . $item["idProduto"] .  "'>Excluir</a> </td>
                         </tr>
-                   ";
+                        ";
                 }
 
             ?>

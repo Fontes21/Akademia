@@ -90,6 +90,12 @@
             $statement->execute($cadastro);
  
             return true;
+
+        } 
+        catch (Exception $e) 
+        {
+            return false;
+        }
         
         
         }
@@ -102,7 +108,16 @@
             $data = $conn->query($sql)->fetchAll();
 
             return $data;
+
+        } 
+       
+        catch (Exception $e) 
+        {
+            return false;
         }
+
+        }
+        
         public function deleteUsuario($_id)
         {
  
@@ -118,6 +133,12 @@
             $statement->execute($cadastro);
  
             return true;
+        } 
+        
+        catch (Exception $e) 
+        {
+            return false;
+        }
  
          
         }
@@ -136,6 +157,12 @@
             $statement->execute($editar);
  
             return true;
+
+        } 
+        catch (Exception $e) 
+        {
+            return false;
+        }
  
          
         }
@@ -154,6 +181,12 @@
             $statement->execute($data);
 
             return true;
+
+        } 
+        catch (Exception $e) 
+        {
+            return false;
+        }
         }
     }
 
