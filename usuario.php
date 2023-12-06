@@ -166,7 +166,6 @@
  
          
         }
-
         public function atualizarcadastro($_id)
         {
             include("assets/db/conn.php");
